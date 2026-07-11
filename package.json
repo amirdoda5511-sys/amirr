@@ -1,0 +1,43 @@
+{
+  "name": "amirmind-ai",
+  "version": "0.1.0",
+  "description": "AmirMind AI - Production-Ready AI Operating System",
+  "private": true,
+  "author": "NIZOMOV AMIRBEK",
+  "license": "Proprietary",
+  "scripts": {
+    "dev": "turbo run dev --parallel",
+    "dev:web": "turbo run dev --filter=web",
+    "dev:api": "turbo run dev --filter=api",
+    "build": "turbo run build",
+    "build:web": "turbo run build --filter=web",
+    "build:api": "turbo run build --filter=api",
+    "test": "turbo run test",
+    "test:watch": "turbo run test -- --watch",
+    "test:coverage": "turbo run test -- --coverage",
+    "lint": "turbo run lint",
+    "format": "turbo run format",
+    "type-check": "turbo run type-check",
+    "db:push": "turbo run db:push",
+    "db:generate": "turbo run db:generate",
+    "db:seed": "turbo run db:seed",
+    "db:studio": "cd apps/api && npx prisma studio",
+    "clean": "turbo run clean && rm -rf node_modules .turbo",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:logs": "docker-compose logs -f",
+    "docker:reset": "docker-compose down -v && docker-compose up -d"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "eslint": "^8.48.0",
+    "eslint-config-next": "^14.0.0",
+    "prettier": "^3.0.0",
+    "typescript": "^5.2.0",
+    "turbo": "^1.10.0"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=8.0.0"
+  }
+}

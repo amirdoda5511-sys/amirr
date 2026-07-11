@@ -1,0 +1,10 @@
+packages:
+  - 'apps/*'
+  - 'packages/*'
+
+installTimeouts:
+  connectTimeout: 60000
+  fetchTimeout: 60000
+  requestTimeout: 60000
+
+nodeLinker: hoisted
