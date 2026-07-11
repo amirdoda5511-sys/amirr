@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 7 90% 4%;
+  --foreground: 0 0% 100%;
+  --card: 217 33% 12%;
+  --card-foreground: 0 0% 100%;
+  --primary: 217 91% 60%;
+  --primary-foreground: 217 100% 97%;
+  --secondary: 142 71% 45%;
+  --secondary-foreground: 0 0% 100%;
+  --accent: 280 85% 65%;
+  --accent-foreground: 0 0% 100%;
+  --muted: 217 33% 50%;
+  --muted-foreground: 217 32% 80%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 217 33% 20%;
+  --input: 217 33% 12%;
+  --ring: 217 91% 60%;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 217 33% 10%;
+    --card: 0 0% 95%;
+    --card-foreground: 217 33% 10%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 217 100% 97%;
+    --secondary: 142 71% 45%;
+    --secondary-foreground: 0 0% 100%;
+    --accent: 280 85% 65%;
+    --accent-foreground: 0 0% 100%;
+    --muted: 217 14% 91%;
+    --muted-foreground: 217 9% 45%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 217 33% 85%;
+    --input: 217 33% 95%;
+    --ring: 217 91% 60%;
+  }
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent;
+  }
+
+  .glass-effect {
+    @apply backdrop-blur-md bg-white/10 border border-white/20 rounded-xl;
+  }
+}
